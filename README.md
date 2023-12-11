@@ -19,6 +19,7 @@ NGINX Ingress Controller provides a robust feature set to secure, strengthen, an
 NGINX Ingress Controller works with both NGINX and NGINX Plus and supports the standard Ingress features - content-based routing and TLS/SSL termination. NGINX Ingress Controller supports the VirtualServer and VirtualServerRoute resources. They enable use cases not supported with the Ingress resource, such as traffic splitting and advanced content-based routing.
 https://github.com/kubernetes/ingress-nginx
 
+
 2. ## Cluster Autoscaler:
 Kubernetes Cluster Autoscaler automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes. The Cluster Autoscaler is typically installed as a Deployment in your cluster.
 Cluster autoscaler scales down only the nodes that can be safely removed.
