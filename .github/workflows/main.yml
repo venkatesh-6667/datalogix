@@ -32,7 +32,7 @@ jobs:
       run: aws eks update-kubeconfig --region $CLUSTER_REGION  --name $CLUSTER_NAME
          
     - name:  check kubectl
-      run: kubectl get pods -n $NAMESPACE
+      run: kubectl get pods 
 
     - name: Helm Upgrade
-      run: helm upgrade -i $EKS_APP_NAME $HELMFOLDER_PATH -n $NAMESPACE
+      run: helm upgrade -i $EKS_APP_NAME $HELMFOLDER_PATH 
