@@ -19,13 +19,7 @@ serviceAccount:
   create: true
   # Annotations to add to the service account
   annotations:
-    eks.amazonaws.com/role-arn: [33m╷[0m[0m
-[33m│[0m [0m[1m[33mWarning: [0m[0m[1mNo outputs found[0m
-[33m│[0m [0m
-[33m│[0m [0m[0mThe state file either has no outputs defined, or all the defined outputs are empty. Please define an output in your configuration with the
-[33m│[0m [0m`output` keyword and run `terraform refresh` for it to become available. If you are using interpolation, please verify the interpolated value
-[33m│[0m [0mis not empty. You can use the `terraform console` command to assist.
-[33m╵[0m[0m
+    eks.amazonaws.com/role-arn: arn:aws:iam::725807538449:role/eks-dev-cluster-secret-manager-role
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: "nginx"
