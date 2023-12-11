@@ -9,7 +9,13 @@
 * For doing this complete setup you have to just run the bash file by giving it permission to execute as:
 
   1. chmod +x main.sh
-  2. ./main.sh
+  2. ./main.sh # this will create the EKS infra in AWS using terraform and deploy apache and Nginx containers using Helm
+  3. If we want to update the application we can just run the GitHub action below.
+     https://github.com/venkatesh-6667/datalogix/blob/main/.github/workflows/apache.yaml
+     https://github.com/venkatesh-6667/datalogix/blob/main/.github/workflows/nginx.yaml
+  5. Check the console output of deployments
+     https://github.com/venkatesh-6667/datalogix/actions
+ 
 
 # HelmCharts 
  Helm charts used here are as:
