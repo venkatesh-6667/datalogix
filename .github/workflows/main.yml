@@ -5,7 +5,7 @@ on:
     
 env:
   CLUSTER_NAME: eks-dev-cluster
-  CLUSTER_REGION: ap-southeast-1
+  CLUSTER_REGION: ap-south-1
   NAMESPACE: default
   EKS_APP_NAME: sample-nginx-app
   HELMFOLDER_PATH: sample-nginx-app/
