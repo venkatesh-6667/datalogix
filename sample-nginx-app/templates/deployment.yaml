@@ -26,12 +26,6 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
-      - name: {{ .name }}
-        csi:
-          driver: {{ .driver }}
-          readOnly: {{ .readOnly }}
-          volumeAttributes:
-            secretProviderClass: {{ .secretProviderClassName }}
       - name: auth-volume
         csi:
           driver: secrets-store.csi.k8s.io
