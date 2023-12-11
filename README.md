@@ -70,66 +70,6 @@ https://github.com/aws/secrets-store-csi-driver-provider-aws
 
 
 
-**TASK2**:
-Fetch Data from API and Write to CSV
-
-#Description
-
-This script retrieves data from a specified API endpoint and writes the fetched information to a CSV file. The data fetched from the API pertains to universities in Canada and includes fields such as 'Name', 'Country', 'Domain', and 'Web Page'. The script processes the JSON response received from the API and writes it into a CSV file, organizing each record according to the specified fields.
-
-#Usage
-
-API Endpoint: Ensure the api_url variable contains the correct URL to the API endpoint that provides university data. The provided endpoint should return a JSON response with university information.
-
-CSV File: The script specifies a csv_filename variable as the output file. This file will be created/overwritten in the script's execution directory and named 'universities_canada.csv'.
-
-Running the Script: Execute the script, providing the API endpoint URL and CSV filename as arguments to the fetch_data_to_csv function.
-
-#Script Workflow:
-
-1.Sends a GET request to the specified API endpoint.
-
-2.Processes the JSON response, extracting relevant university data like name, country, domain, and web page.
-
-3.Creates a CSV file and writes the extracted data into the file with appropriate headers.
-
-#Note
-API Endpoint: Ensure the API endpoint is accessible and provides the expected JSON response with university data.
-The script assumes a single domain and web page for each university but can be modified if the API provides multiple values.
-Double-check the CSV output to ensure the data is correctly formatted according to the specified headers.
-
-
-
-**TASK3:**
-Update Records via API from CSV
-
-#Description:
-
-This script facilitates updating or creating records in a system through a provided API endpoint using data from a CSV file. The script reads a CSV file containing university data and interacts with the specified API to update existing records or create new ones based on the information provided in the CSV.
-
-#Usage
-
-CSV File: Ensure the CSV file contains data in the specified format with columns such as 'Name', 'Country', 'Domain', and 'Web Page'. Modify the script as needed to match the actual structure of your CSV file.
-
-#API Endpoint: Replace api_endpoint variable with the actual endpoint URL where the records need to be updated or created.
-
-#Running the Script: Execute the script, providing the CSV file path and API endpoint as arguments to the update_records_via_api function.
-
-#Script Workflow:
-Reads data from the specified CSV file.
-
-1.Processes each row of data from the CSV file, preparing a payload for interaction with the API.
-
-2.Checks if the university already exists in the system via a GET request to the API.
-
-3.If the university exists, attempts to update the existing record using a PUT or PATCH request
-.
-4.If the university doesn't exist, creates a new record using a POST request to the API.
-
-Note:
-Review the API documentation to ensure compatibility with the provided data and operations (PUT, PATCH, POST).
-Verify that the data in the CSV aligns with the expected format for interacting with the API.
-
 
 
 
