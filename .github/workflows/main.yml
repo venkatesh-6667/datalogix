@@ -29,8 +29,10 @@ jobs:
           aws-region: ap-south-1
           
     - name: Update kubeconfig file
-      run: aws eks update-kubeconfig --region $CLUSTER_REGION  --name $CLUSTER_NAME
-         
+      run: |
+        aws eks update-kubeconfig --region $CLUSTER_REGION  --name $CLUSTER_NAME
+        helm upgrade -i secrets-store-csi-driver secrets-store-csi-driver/ -n kube-system
+        helm upgrade -i secrets-store-csi-driver-provider-aws secrets-store-csi-driver-provider-aws/ -n kube-system
     - name:  check kubectl
       run: kubectl get pods 
 
